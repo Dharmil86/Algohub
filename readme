@@ -1,0 +1,7 @@
+parseInt converts string from url  to Int 
+skip is the formula to show the exact content on the page
+JWT gives loggedin users a signed token to access some features
+for register take data from url if user not exists hash the password,create new user and give token
+for login take data from url if exists match the password and give token
+In HTTP, the client sends the token in the Authorization header
+authmiddleware checks if the user has token or not and if yes then matches the token
