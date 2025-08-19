@@ -16,7 +16,7 @@ export default function Home() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:5000/api/v1/content?page=${page}&limit=${limit}`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/v1/content?page=${page}&limit=${limit}`)
       .then((res) => res.json())
       .then((json) => {
         setData(json.data || []);
