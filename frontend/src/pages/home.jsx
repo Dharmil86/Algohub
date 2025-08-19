@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import SortDropdown from "../components/sorting";
+require('dotenv').config();
 
 export default function Home() {
   const [data, setData] = useState([]);
