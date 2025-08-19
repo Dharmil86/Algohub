@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import SortDropdown from "../components/sorting";
-require('dotenv').config();
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -17,7 +16,7 @@ export default function Home() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`${process.env.VITE_API_URL}/api/v1/content?page=${page}&limit=${limit}`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/v1/content?page=${page}&limit=${limit}`)
       .then((res) => res.json())
       .then((json) => {
         setData(json.data || []);
