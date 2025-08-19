@@ -17,7 +17,7 @@ export default function Home() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`${import.meta.env.VITE_API_URL}/api/v1/content?page=${page}&limit=${limit}`)
+    fetch(`${process.env.VITE_API_URL}/api/v1/content?page=${page}&limit=${limit}`)
       .then((res) => res.json())
       .then((json) => {
         setData(json.data || []);
